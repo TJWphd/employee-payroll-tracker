@@ -1,9 +1,12 @@
-// Get a reference to the #add-employees-btn element
+// makes a reference for the #add-employees-btn element
+
 const addEmployeesBtn = document.querySelector("#add-employees-btn");
 
-// Collect employee data
+// collects employee data
+
 const collectEmployees = function () {
-  // TODO: use a "while" loop to get user input to create and return an array of employee objects
+  // uses a "while" loop to get user input
+
   const employeesArray = [];
   let fact = true;
   while (fact) {
@@ -11,7 +14,7 @@ const collectEmployees = function () {
     const lastName = prompt("what is your last name?");
     const salary = prompt("what is your salary?");
 
-    // todo: create an object with all 3 of these values, push that object to employeesArray
+    // creates an object with all 3 of these values, and pushes that object to employeesArray
 
     var payData = {};
     payData["employeeFirst"] = firstName;
@@ -48,28 +51,32 @@ const displayAverageSalary = function (employeesArray) {
   console.log(`Average employee salary is $${salary}.`);
 };
 
-// Select a random employee
+// Selects a random employee
+
 const getRandomEmployee = function (employeesArray) {
-  // TODO: Select and display a random employee
-  //"Math" object can help here... Math.random
+  // Displays a random employee in the console log
+
   console.log(`The winner is ${Math.random} employee.`);
 };
 
 /*
-  ====================
-  STARTER CODE
-  Do not modify any of the code below this line:
+====================
+STARTER CODE - not modified
 */
 
-// Display employee data in an HTML table
+// Displays employee data in an HTML table
+
 const displayEmployees = function (employeesArray) {
-  // Get the employee table
+  // Gets the employee table
+
   const employeeTable = document.querySelector("#employee-table");
 
-  // Clear the employee table
+  // Clears the employee table
+
   employeeTable.innerHTML = "";
 
-  // Loop through the employee data and create a row for each employee
+  // Loops through the employee data and creates a row for each employee
+
   for (let i = 0; i < employeesArray.length; i++) {
     const currentEmployee = employeesArray[i];
 
@@ -84,7 +91,9 @@ const displayEmployees = function (employeesArray) {
     newTableRow.append(lastNameCell);
 
     const salaryCell = document.createElement("td");
-    // Format the salary as currency
+
+    // Formats the salary as currency
+
     salaryCell.textContent = currentEmployee.salary.toLocaleString("en-US", {
       style: "currency",
       currency: "USD",
@@ -118,5 +127,6 @@ const trackEmployeeData = function () {
   displayEmployees(employees);
 };
 
-// Add event listener to 'Add Employees' button
+// Adds event listener to 'Add Employees' button
+
 addEmployeesBtn.addEventListener("click", trackEmployeeData);
