@@ -14,7 +14,7 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  background-color: #7fa5cb;
 }
 
 .wrapper {
@@ -35,7 +35,7 @@ h2 {
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(15, 51%, 75%);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
@@ -59,14 +59,14 @@ h2 {
 }
 
 table {
-  width:100%;
+  width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
 }
 
-td{
+td {
   text-align: center;
-  border:4px solid black;
+  border: 4px solid black;
 }
 
 tbody tr:nth-child(even) {
@@ -93,7 +93,7 @@ tbody tr:nth-child(even) {
 
 .btn {
   border: none;
-  background-color: hsl(223, 74%, 48%);
+  background-color: hsl(160, 22%, 53%);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
   color: hsl(0, 0%, 100%);
@@ -114,7 +114,6 @@ button[disabled] {
 .float-right {
   float: right;
 }
-
 
 @media (max-width: 690px) {
   .btn {

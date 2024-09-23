@@ -1,12 +1,9 @@
 // makes a reference for the #add-employees-btn element
-
 const addEmployeesBtn = document.querySelector("#add-employees-btn");
 
 // collects employee data
-
 const collectEmployees = function () {
   // uses a "while" loop to get user input
-
   const employeesArray = [];
   let fact = true;
   while (fact) {
@@ -15,7 +12,6 @@ const collectEmployees = function () {
     const salary = prompt("what is your salary?");
 
     // creates an object with all 3 of these values, and pushes that object to employeesArray
-
     var payData = {};
     payData["employeeFirst"] = firstName;
     payData["employeeLast"] = lastName;
@@ -48,21 +44,26 @@ const displayAverageSalary = function (employeesArray) {
 
   // TODO: Calculate and display the average salary using a "template literal string"
   // show computed/aggregate data
-  console.log(`Average employee salary is $${salary}.`);
+
+  console.log(`Average employee salary is $${salary.toFixed(2)}.`);
 };
 
-// Selects a random employee
+// Selects a random employee, Displays a random employee in the console log
+function getRandomInt(employeeCount) {
+  return Math.floor(Math.random()) * employeeCount;
+}
 
 const getRandomEmployee = function (employeesArray) {
-  // Displays a random employee in the console log
-
-  console.log(`The winner is ${Math.random} employee.`);
+  const randomInteger = getRandomInt(employeesArray.length);
+  const randomEmployee = employeesArray[randomInteger];
+  console.log(
+    `Employee of the month is ${randomEmployee.employeeFirst} ${randomEmployee.employeeLast}.`
+  );
 };
 
-/*
-====================
-STARTER CODE - not modified
-*/
+// ====================
+// STARTER CODE - not modified
+// */
 
 // Displays employee data in an HTML table
 
