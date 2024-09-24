@@ -17,4 +17,4 @@ Screenshot: ./assets/images/paytracker.png
 
 ## credits
 
-Zac Warner, John Young, David Park: edX educational team
+Source code: the majority of the HTML and CSS code, modified slightly by myself in the HTML head and the CSS background colors, and the second half of the JavaScript code (lines 65-end), were provided to me by edX/UCB Bootcamp. The first half of the JavaScript was put together with support from Zac Warner (TA) and David Park (tutor).
