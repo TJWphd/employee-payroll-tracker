@@ -9,42 +9,42 @@ const collectEmployees = function () {
   while (fact) {
     const firstName = prompt("what is your first name?");
     const lastName = prompt("what is your last name?");
-    const salary = prompt("what is your salary?");
+    let salary = prompt("what is your salary?");
+    if (isNaN(salary)) {
+      alert("salary must be a valid number");
+      salary = 0;
+    } else {
+      salary = parseInt(salary);
+    }
 
     // creates an object with all 3 of these values, and pushes that object to employeesArray
-    var payData = {};
-    payData["employeeFirst"] = firstName;
-    payData["employeeLast"] = lastName;
-    payData["employeeSalary"] = salary;
+    var payData = { firstName: firstName, lastName: lastName, salary: salary };
     employeesArray.push(payData);
 
     fact = confirm("continue (OK) or cancel");
   }
 
+  // displays data alphabetically by lastName, as first/last/salary
   console.log(employeesArray);
   return employeesArray;
-
-  // display data alphabetically by lastName, as
-  //firstName:"John",
-  //lastName:"Smith",
-  //salary:12345;
-  // salary should default to $0 if not entered as a number (use "isNaN" function for this)
 };
 
-// Display the average salary
+// displays the average salary
 const displayAverageSalary = function (employeesArray) {
   console.log(employeesArray);
   let fullPayroll = 0;
 
+  // salary should default to $0 if not entered as a number (use "isNaN" function for this)
   for (i = 0; i < employeesArray.length; i++) {
     fullPayroll = fullPayroll + Number(employeesArray[i].employeeSalary);
   }
+  //prints total payroll costs
   console.log(fullPayroll);
+
+  // calculates/displays the average salary using a template literal string
   const salary = fullPayroll / employeesArray.length;
 
-  // TODO: Calculate and display the average salary using a "template literal string"
-  // show computed/aggregate data
-
+  // prints average salary
   console.log(`Average employee salary is $${salary.toFixed(2)}.`);
 };
 
