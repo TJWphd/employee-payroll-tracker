@@ -12,9 +12,14 @@ The three datapoints are collected into objects, which are pushed into an array 
 
 ## usage
 
+Repo link: https://github.com/TJWphd/employee-payroll-tracker
 Deployment link: https://tjwphd.github.io/employee-payroll-tracker
 Screenshot: ./assets/images/paytracker.png
 
 ## credits
 
-Source code: the majority of the HTML and CSS code, modified slightly by myself in the HTML head and the CSS background colors, and the second half of the JavaScript code (lines 65-end), were provided to me by edX/UCB Bootcamp. The first half of the JavaScript was put together with support from Zac Warner (TA) and David Park (tutor).
+Source code: the majority of the HTML and CSS code, modified slightly by myself in the HTML head and the CSS background colors, and the second half of the JavaScript code (lines 65-end), were provided to me by edX/UCB Bootcamp.
+
+The first half of the JavaScript was put together with support from Zac Warner (TA) and David Park (tutor).
+
+Resubmission based on some quick code fixes (variable names, mostly) with help from Juan Torres (tutor).

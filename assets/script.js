@@ -36,7 +36,8 @@ const displayAverageSalary = function (employeesArray) {
 
   // salary should default to $0 if not entered as a number (use "isNaN" function for this)
   for (i = 0; i < employeesArray.length; i++) {
-    fullPayroll = fullPayroll + Number(employeesArray[i].employeeSalary);
+    console.log();
+    fullPayroll = fullPayroll + Number(employeesArray[i].salary);
   }
   //prints total payroll costs
   console.log(fullPayroll);
@@ -57,7 +58,7 @@ const getRandomEmployee = function (employeesArray) {
   const randomInteger = getRandomInt(employeesArray.length);
   const randomEmployee = employeesArray[randomInteger];
   console.log(
-    `Employee of the month is ${randomEmployee.employeeFirst} ${randomEmployee.employeeLast}.`
+    `Employee of the month is ${randomEmployee.firstName} ${randomEmployee.lastName}.`
   );
 };
 
@@ -129,5 +130,4 @@ const trackEmployeeData = function () {
 };
 
 // Adds event listener to 'Add Employees' button
-
 addEmployeesBtn.addEventListener("click", trackEmployeeData);
